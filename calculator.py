@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
         parts = expr.split()
         if len(parts) != 3:
-            print("Invalid format, use: number operator number")
+            print("haha, use: number operator number")
             continue
 
         try:
@@ -49,7 +49,7 @@ if __name__ == "__main__":
         elif op == '/':
             result = divide(a, b)
         else:
-            print(f"Unsupported operator: {op}")
+            print(f" {op}")
             continue
 
         print(f"Result: {result}")
