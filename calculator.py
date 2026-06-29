@@ -12,31 +12,31 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "错误：除数不能为零"
+        return "Error: division by zero"
     return a / b
 
 
 if __name__ == "__main__":
-    print("===== 简易计算器 =====")
-    print("支持运算: +  -  *  /")
-    print("输入 'q' 退出")
+    print("===== Simple Calculator =====")
+    print("Operations: +  -  *  /")
+    print("Enter 'q' to quit")
 
     while True:
-        expr = input("\n请输入算式 (如 1 + 2): ").strip()
+        expr = input("\nEnter expression (e.g. 1 + 2): ").strip()
         if expr.lower() == 'q':
-            print("再见！")
+            print("Goodbye!")
             break
 
         parts = expr.split()
         if len(parts) != 3:
-            print("格式错误，请输入: 数字 运算符 数字")
+            print("Invalid format, use: number operator number")
             continue
 
         try:
             a = float(parts[0])
             b = float(parts[2])
         except ValueError:
-            print("请输入有效的数字")
+            print("Please enter valid numbers")
             continue
 
         op = parts[1]
@@ -49,8 +49,8 @@ if __name__ == "__main__":
         elif op == '/':
             result = divide(a, b)
         else:
-            print(f"不支持的运算符: {op}")
+            print(f"Unsupported operator: {op}")
             continue
 
-        print(f"结果: {result}")
+        print(f"Result: {result}")
 
